@@ -11,13 +11,3 @@ const ProductSchema = new mongoose.Schema({
 
 module.exports = mongoose.model("products",ProductSchema);
 
-// const mongoose = require('mongoose');
-
-
-// const ProductSchema = new mongoose.Schema({
-//     name:String,
-//     email:String,
-//     password:String
-// });
-
-// module.exports = mongoose.model("product",ProductSchema);

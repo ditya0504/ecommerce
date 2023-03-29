@@ -43,5 +43,15 @@ app.post("/add-product", async (req,resp)=>{
     let result = await product.save();
     resp.send(result)
 })
+
+app.get("/products",async (req,resp)=>{
+    let products = await Product.find();
+    if(products.length){
+
+        resp.send(products)
+    }else{
+        resp.send({result:"No Product found"})
+    }
+})
 app.listen(1000);
 
