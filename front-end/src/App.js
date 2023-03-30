@@ -6,6 +6,7 @@ import SignUp from './component/signUp';
 import Footer from './component/Footer';
 import PrivateComponant from './component/PrivateComponant';
 import Login from './component/Login';
+import AddProduct from './component/AddProduct'; // use the add product   file
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
       <Route element = {<PrivateComponant />}>
       <Route path="/" element={<h1>Product Listing Component</h1>} />
-      <Route path="/add" element={<h1>Add Product Component</h1>} />
+      <Route path="/add" element={<AddProduct />} />
       <Route path="/update" element={<h1>Update Product Component</h1>} />
       <Route path="/logout" element={<h1>Logout Component</h1>} />
       <Route path="/profile" element={<h1>Profile Component</h1>} />

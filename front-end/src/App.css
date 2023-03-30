@@ -26,7 +26,7 @@ text-align: center;
 width: 100%;
 background-color: brown;
 }
-.register{
+.register, .product{
   margin-left: 29%;
 }
 .login{
@@ -76,6 +76,13 @@ background-color: brown;
   margin-top: 0px;
   margin-left: 20px;
 
+}
+
+.invalid-input{
+  color: red;
+  margin-top: -20px;
+  display: block;
+  margin-left: 20px;
 }
 
 @keyframes App-logo-spin {
