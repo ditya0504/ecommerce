@@ -46,7 +46,7 @@ app.post("/add-product", async (req,resp)=>{
 
 app.get("/products",async (req,resp)=>{
     let products = await Product.find();
-    if(products.length){
+    if(products.length>0){
 
         resp.send(products)
     }else{
