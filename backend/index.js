@@ -22,36 +22,36 @@ app.post("/register", async (req, resp) => {
 
 
 app.post("/login", async (req, resp) => {
-    // console.log()
-    // if (req.body.password && req.body.email) {
-    //     let user = await User.findOne(req.body).select("-password");
-    //     if (user) {
-    //         resp.send(user)
-    //     } else {
-    //         resp.send({ result: 'No User Found' })
-    //     }
-    // } else {
-    //     resp.send({ result: 'No User Found' })
-    // }
-
     console.log()
     if (req.body.password && req.body.email) {
-        let user = await Student.findOne(req.body).select("-password");
+        let user = await User.findOne(req.body).select("-password");
         if (user) {
-            Jwt.sign({ user }, jwtkey, { expiresIn: "2h" }, (err, token) => {
-                if (err) {
-                    resp.send({ result: "Something went worng, Please try after sometimes" })
-                }
-                resp.send({ user, auth: token })
-
-            })
-
+            resp.send(user)
         } else {
             resp.send({ result: 'No User Found' })
         }
     } else {
         resp.send({ result: 'No User Found' })
     }
+
+    // console.log()
+    // if (req.body.password && req.body.email) {
+    //     let user = await Student.findOne(req.body).select("-password");
+    //     if (user) {
+    //         Jwt.sign({ user }, jwtkey, { expiresIn: "2h" }, (err, token) => {
+    //             if (err) {
+    //                 resp.send({ result: "Something went worng, Please try after sometimes" })
+    //             }
+    //             resp.send({ user, auth: token })
+
+    //         })
+
+    //     } else {
+    //         resp.send({ result: 'No User Found' })
+    //     }
+    // } else {
+    //     resp.send({ result: 'No User Found' })
+    // }
 
 
 })
